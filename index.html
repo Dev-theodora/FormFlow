@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h2>FormFlow</h2>
+    <span id="stepText">Step 1 of 4</span>
+  </header>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <main class="form-container">
+
+    <!-- STEP 1 -->
+    <section class="form-step active" id="step1">
+
+      <h1>Tell us about yourself</h1>
+      <p>Let's start with some basic information about you.</p>
+
+      <form>
+
+        <div>
+          <label for="firstName">First name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
+          >
+          <small class="error" id="firstNameError" role="alert"></small>
+        </div>
+
+        <div>
+          <label for="lastName">Last name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
+          >
+          <small class="error" id="lastNameError" role="alert"></small>
+        </div>
+
+        <button type="button" id="continueBtn">
+          Continue
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- STEP 2 -->
+    <section class="form-step" id="step2">
+
+      <h1>Tell us about your work</h1>
+      <p>Now let's get some information about what you do.</p>
+
+      <form>
+
+        <div>
+          <label for="jobTitle">Job title</label>
+
+          <input
+            type="text"
+            id="jobTitle"
+            name="jobTitle"
+            placeholder="Enter your job title"
+          >
+
+          <small class="error" id="jobTitleError" role="alert"></small>
+        </div>
+
+        <button type="button" id="backBtn">
+          Back
+        </button>
+
+        <button type="button" id="nextBtn">
+          Continue
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- STEP 3 -->
+    <section class="form-step" id="step3">
+
+      <h1>Tell us your location</h1>
+      <p>Let us know where you are located.</p>
+
+      <form>
+
+        <div>
+          <label for="location">Location</label>
+
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter your location"
+          >
+
+          <small class="error" id="locationError" role="alert"></small>
+        </div>
+
+        <button type="button" id="backBtn2">
+          Back
+        </button>
+
+        <button type="button" id="nextBtn2">
+          Continue
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- STEP 4 -->
+    <section class="form-step" id="step4">
+
+      <h1>Review your information</h1>
+      <p>Please check your information before submitting.</p>
+
+      <div class="review-box">
+
+        <div class="review-item">
+
+          <div>
+            <span>First name</span>
+            <strong id="reviewFirstName"></strong>
+          </div>
+
+          <button type="button" class="edit-field" id="editFirstName">
+            Edit
+          </button>
+
+        </div>
+
+
+        <div class="review-item">
+
+          <div>
+            <span>Last name</span>
+            <strong id="reviewLastName"></strong>
+          </div>
+
+          <button type="button" class="edit-field" id="editLastName">
+            Edit
+          </button>
+
+        </div>
+
+
+        <div class="review-item">
+
+          <div>
+            <span>Job title</span>
+            <strong id="reviewJobTitle"></strong>
+          </div>
+
+          <button type="button" class="edit-field" id="editJobTitle">
+            Edit
+          </button>
+
+        </div>
+
+
+        <div class="review-item">
+
+          <div>
+            <span>Location</span>
+            <strong id="reviewLocation"></strong>
+          </div>
+
+          <button type="button" class="edit-field" id="editLocation">
+            Edit
+          </button>
+
+        </div>
+
+      </div>
+
+      <button type="button" id="submitBtn">
+        Submit
+      </button>
+
+    </section>
+
+
+    <!-- SUCCESS -->
+    <section class="form-step success-screen" id="successStep">
+
+      <div class="success-icon">✓</div>
+
+      <h1>You're all set!</h1>
+
+      <p>
+        Your information has been submitted successfully.
+      </p>
+
+      <button type="button" id="startAgainBtn">
+        Start Again
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
